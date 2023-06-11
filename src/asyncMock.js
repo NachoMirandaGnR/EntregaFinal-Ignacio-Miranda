@@ -1,12 +1,10 @@
-import assets from "./components/assets";
-
 const products = [
   {
     id: "1",
     name: "Gibson Les Paul 1955 Goldtop",
     price: 15000,
     category: "Guitarra Electrica",
-    img: require("./components/assets/goldtop.jpg").default,
+    /* img:  */
     stock: 3,
     description: "Guitarra Electrica Gibson Les Paul",
   },
@@ -15,7 +13,7 @@ const products = [
     name: "Gibson Songwriter Deluxe 2020",
     price: 6000,
     category: "Guitarra Acustica",
-    img: require("./components/assets/gibsonsongwriter.jpg").default,
+    /* img:  */
     stock: 4,
     description: "Guitarra Acustica Gibson",
   },
@@ -25,7 +23,7 @@ const products = [
     name: "Fender Stratocaster SRV 1973 Heavy Relic",
     price: 12500,
     category: "Guitarra Electrica",
-    img: require("./components/assets/srvstrat.jpg").default,
+    /* img: */
     stock: 2,
     description: "Guitarra Electrica Fender Stratocaster SRV Signature HR",
   },
@@ -35,7 +33,7 @@ const products = [
     name: "Gibson Les Paul Custom Black Beauty 1969 Reissue",
     price: 18650,
     category: "Guitarra Electrica",
-    img: require("./components/assets/blackbeauty.jpg").default,
+    /* img:  */
     stock: 1,
     description: "Guitarra Electrica Gibson Les Paul Custom",
   },
@@ -45,7 +43,7 @@ const products = [
     name: "Gibson Gibson Trini Lopez 1967",
     price: 11990,
     category: "Guitarra Electrica",
-    img: require("./components/assets/trinilopez.jpg").default,
+    /* img: */
     stock: 2,
     description: "Guitarra Electrica Gibson Trini Lopez",
   },
@@ -55,7 +53,7 @@ const products = [
     name: "Fender Stratocaster EVH Frankenstrat 2007",
     price: 7600,
     category: "Guitarra Electrica",
-    img: require("./components/assets/evhstrat.jpg").default,
+    /* img: */
     stock: 5,
     description: "Guitarra Electrica Fender EVH Signature",
   },
@@ -65,7 +63,7 @@ const products = [
     name: "Marshall JCM 50/25W Model 2553 1988",
     price: 2960,
     category: "Amplificador",
-    img: require("./components/assets/marshall.jpg").default,
+    /* img: */
     stock: 2,
     description: "Amplificador Guitarra Electrica Marshall",
   },
@@ -75,7 +73,7 @@ const products = [
     name: "Fender Deluxe 1962 Brownface",
     price: 9500,
     category: "Amplificador",
-    img: require("./components/assets/fenderdeluxeamp.jpg").default,
+    /* img: */
     stock: 1,
     description: "Amplificador Guitarra Electrica Fender",
   },
@@ -85,7 +83,7 @@ const products = [
     name: "Taylor Custom Shop Grand Symphony 2009",
     price: 4490,
     category: "Guitarra Acustica",
-    img: require("./components/assets/taylor.jpg").default,
+    /* img: */
     stock: 4,
     description: "Guitarra Acustica Taylor",
   },
@@ -95,7 +93,7 @@ const products = [
     name: "Pedal Mooer Afinador Baby Tuner True Bypass Guitarra Bajo",
     price: 52,
     category: "Accesorio",
-    img: require("./components/assets/pedal.jpg").default,
+    /* img: */
     stock: 5,
     description: "Pedal Afinador Para Instrumentos de Cuerda",
   },
@@ -105,7 +103,7 @@ const products = [
     name: "Púas Ernie Ball Medium - Bolsa de 50 Unidades",
     price: 18,
     category: "Accesorio",
-    img: require("./components/assets/puas.jpg").default,
+    /* img: */
     stock: 5,
     description: "Puas Para Instrumentos de Cuerda",
   },
@@ -115,7 +113,7 @@ const products = [
     name: "Cable Ernie Ball de 7,62 Metros Mallado Para Instrumentos Rosa",
     price: 42,
     category: "Accesorio",
-    img: require("./components/assets/cable.jpg").default,
+    /* img: */
     stock: 5,
     description: "Cable Para Instrumentos",
   },
@@ -132,7 +130,7 @@ export const getProducts = () => {
 export const getProductById = (productsId) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(products.find((prod) => prod.id === productId));
+      resolve(products.find((prod) => prod.id === productsId));
     });
   });
 };

@@ -1,4 +1,4 @@
-import "./Item.css";
+import { Link } from "react-router-dom";
 
 const Item = ({ id, name, price, stock }) => {
   return (
@@ -7,14 +7,16 @@ const Item = ({ id, name, price, stock }) => {
         <h2 className="ItemHeader">{name}</h2>
       </header>
       <picture>
-        <img src={img} className="ItemImg" />
+        <img /* src={img} */ className="ItemImg" />
       </picture>
       <section>
         <p className="Info">Precio: ${price}</p>
         <p className="Info">Stock Disponible: {stock}</p>
       </section>
       <footer className="ItemFooter">
-        <button className="Option">Ver Detalles</button>
+        <Link to={`/item/${id}`} className="Option">
+          Ver Detalle
+        </Link>
       </footer>
     </article>
   );

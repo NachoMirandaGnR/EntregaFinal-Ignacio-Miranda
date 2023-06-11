@@ -3,19 +3,36 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemCount from "./components/ItemCount/ItemCount";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cart from "./components/Cart/Cart";
+
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <ItemListContainer
-        greeting={"Bienvenidos a la Tienda de Musica Mas Grande de Internet"}
-      />
-      <ItemCount
-        initial={2}
-        stock={5}
-        onAdd={(quantity) => console.log("Cantidad agregada ", quantity)}
-      />
+      <BrowserRouter>
+        <CartProvider>
+          <NavBar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <ItemListContainer greeting={"Todos Nuestros Productos"} />
+              }
+            />
+            <Route
+              path="/category/:categoryId"
+              element={
+                <ItemListContainer greeting={"Productos Por Categoria"} />
+              }
+            />
+            <Route path="item/:ItemId" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+          </Routes>
+        </CartProvider>
+      </BrowserRouter>
     </div>
   );
 }
