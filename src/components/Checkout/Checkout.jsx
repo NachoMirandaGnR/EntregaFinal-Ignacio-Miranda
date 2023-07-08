@@ -1,13 +1,10 @@
+/* import "./Checkout.css"; */
 import { useContext, useState } from "react";
-import { FirebaseContext } from "../../firebase";
 import { CartContext } from "../../context/CartContext";
 
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 const Checkout = () => {
-  const { firebase } = useContext(FirebaseContext);
-  const db = firebase.firestore();
-
   const [loading, setLoading] = useState(false);
   const [orderId, setOrderId] = useState("");
 
@@ -15,25 +12,6 @@ const Checkout = () => {
 
   const createOrder = async ({ name, phone, email }) => {
     setLoading(true);
-
-    try {
-      // Create a new order document in Firestore
-      const orderRef = await db.collection("orders").add({
-        name,
-        phone,
-        email,
-        items: cart,
-        total,
-        date: firebase.firestore.FieldValue.serverTimestamp(),
-        status: "generada",
-      });
-
-      setLoading(false);
-      setOrderId(orderRef.id);
-      clearCart();
-    } catch (error) {
-      console.error("Error creating order: ", error);
-    }
   };
 
   if (loading) {

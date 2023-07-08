@@ -1,0 +1,31 @@
+.CartItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.CartItemInfo {
+  flex-grow: 1;
+}
+
+.CartItemName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.CartItemPrice {
+  font-size: 16px;
+}
+
+.CartItemQuantity {
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.CartItemQuantity p {
+  margin: 0;
+}

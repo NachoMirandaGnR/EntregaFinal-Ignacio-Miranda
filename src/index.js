@@ -1,11 +1,12 @@
+import "./index.css";
 import React from "react";
 import { render } from "react-dom";
-import { initializeApp } from "firebase/app";
-import firebaseConfig from "./firebaseConfig";
+/* import { initializeApp } from "firebase/app";
+import firebaseConfig from "./firebaseConfig"; */
 import App from "./App";
 
-// Initialize Firebase
-initializeApp(firebaseConfig);
+/* // Initialize Firebase
+initializeApp(firebaseConfig); */
 
 render(
   <React.StrictMode>

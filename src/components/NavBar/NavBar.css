@@ -1,0 +1,47 @@
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #343a40;
+  padding: 0 50px;
+}
+
+nav h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #edf2f4;
+  text-decoration: none;
+}
+
+nav div {
+  display: flex;
+}
+
+nav button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #343a40;
+  color: #edf2f4;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #212529;
+}
+
+nav .active button {
+  background-color: #212529;
+}
+
+.CartWidget {
+  align-self: center;
+  color: #edf2f4;
+}

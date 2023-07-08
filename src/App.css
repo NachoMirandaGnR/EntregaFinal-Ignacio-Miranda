@@ -1,0 +1,181 @@
+.App {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.NavBar {
+  background-color: #222;
+  color: #fff;
+  padding: 16px;
+}
+
+.NavBar h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.NavBar button {
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.NavBar button:hover {
+  background-color: #ffc200;
+}
+
+.Main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.ProductList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+.ProductCard {
+  background-color: #f1f1f1;
+  padding: 16px;
+}
+
+.ProductCard h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.ProductCard p {
+  margin: 8px 0;
+}
+
+.ProductCard button {
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ProductCard button:hover {
+  background-color: #ffc200;
+}
+
+.ProductDetail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.ProductDetail h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.ProductDetail p {
+  margin: 8px 0;
+}
+
+.ProductDetail button {
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ProductDetail button:hover {
+  background-color: #ffc200;
+}
+
+.Cart {
+  padding: 16px;
+}
+
+.Cart h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.CartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.CartItemName {
+  margin: 0;
+  font-size: 18px;
+}
+
+.CartItemPrice {
+  margin: 0;
+  font-size: 16px;
+}
+
+.CartItemQuantity {
+  font-size: 14px;
+}
+
+.CartTotal {
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+.CartButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.CartButtons button {
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.CartButtons button:hover {
+  background-color: #ffc200;
+}
+
+.CheckoutForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.CheckoutForm input {
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.CheckoutForm button {
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.CheckoutForm button:hover {
+  background-color: #ffc200;
+}

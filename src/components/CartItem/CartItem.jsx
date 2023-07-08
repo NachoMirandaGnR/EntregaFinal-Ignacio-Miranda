@@ -1,6 +1,8 @@
+import "./CartItem.css";
+
 import React from "react";
 
-const CartItem = ({ id, name, price, quantity }) => {
+const CartItem = ({ id, name, img, price, quantity }) => {
   return (
     <div className="CartItem">
       <div className="CartItemInfo">

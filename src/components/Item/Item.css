@@ -1,0 +1,48 @@
+.Item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #333;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+}
+
+.ItemHeader {
+  margin-bottom: 10px;
+  color: #ffcc00;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.ItemImg {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.Info {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.ItemFooter {
+  margin-top: 10px;
+}
+
+.Option {
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.Option:hover {
+  background-color: #666;
+}

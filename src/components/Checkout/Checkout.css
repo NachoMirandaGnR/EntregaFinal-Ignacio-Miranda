@@ -1,0 +1,46 @@
+/* .Checkout {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.Checkout h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.CheckoutForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.CheckoutForm label {
+  margin-bottom: 10px;
+}
+
+.CheckoutForm input[type="text"],
+.CheckoutForm input[type="email"],
+.CheckoutForm input[type="tel"] {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.CheckoutForm button {
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+}
+
+.CheckoutForm button:hover {
+  background-color: #e0e0e0;
+}
+
+.CheckoutForm button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.CheckoutForm .errorMessage {
+  color: red;
+  margin-top: 10px;
+} */

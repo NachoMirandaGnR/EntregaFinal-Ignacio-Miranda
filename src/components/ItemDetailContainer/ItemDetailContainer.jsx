@@ -1,34 +1,25 @@
-import { useContext, useEffect, useState } from "react";
-import { FirebaseContext } from "../../firebase";
+import "./ItemDetailContainer.css";
+import { useState, useEffect } from "react";
+import { getProductById } from "../../asyncMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const { firebase } = useContext(FirebaseContext);
-  const db = firebase.firestore();
-
   const [product, setProduct] = useState(null);
   const { itemId } = useParams();
 
   useEffect(() => {
-    const getProductFromFirestore = () => {
-      db.collection("items")
-        .doc(itemId)
-        .get()
-        .then((doc) => {
-          if (doc.exists) {
-            setProduct({ id: doc.id, ...doc.data() });
-          } else {
-            console.error("Product not found");
-          }
-        })
-        .catch((error) => {
-          console.error("Error getting product: ", error);
-        });
+    const fetchProduct = async () => {
+      try {
+        const response = await getProductById(itemId);
+        setProduct(response);
+      } catch (error) {
+        console.error(error);
+      }
     };
 
-    getProductFromFirestore();
-  }, [itemId, db]);
+    fetchProduct();
+  }, [itemId]);
 
   return (
     <div className="ItemDetailContainer">
