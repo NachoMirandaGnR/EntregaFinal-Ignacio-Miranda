@@ -1,55 +1,53 @@
 import { useState } from "react";
 
 const CheckoutForm = ({ onConfirm }) => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+  });
 
-  const handleConfirm = (event) => {
-    event.preventDefault();
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-    const userData = {
-      name,
-      phone,
-      email,
-    };
-
-    onConfirm(userData);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onConfirm(formData);
   };
 
   return (
-    <div>
-      <form onSubmit={handleConfirm} className="Form">
-        <label className="Label">
-          Nombre
-          <input
-            className="Input"
-            type="text"
-            value={name}
-            onChange={({ target }) => setName(target.value)}
-          />
-        </label>
-
-        <label className="Label">
-          Telefono
-          <input
-            className="Input"
-            type="text"
-            value={phone}
-            onChange={({ target }) => setPhone(target.value)}
-          />
-        </label>
-
-        <label className="Label">
-          Email
-          <input
-            className="Input"
-            type="text"
-            value={email}
-            onChange={({ target }) => setEmail(target.value)}
-          />
-        </label>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="name"
+        placeholder="Nombre"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="text"
+        name="phone"
+        placeholder="Teléfono"
+        value={formData.phone}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Correo electrónico"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+      <button type="submit">Realizar Compra</button>
+    </form>
   );
 };
+
+export default CheckoutForm;

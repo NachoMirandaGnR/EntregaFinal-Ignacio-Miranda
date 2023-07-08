@@ -7,7 +7,7 @@ const Item = ({ id, name, price, stock }) => {
         <h2 className="ItemHeader">{name}</h2>
       </header>
       <picture>
-        <img /* src={img} */ className="ItemImg" />
+        {/* <img src={img} alt={name} className="ItemImg" /> */}
       </picture>
       <section>
         <p className="Info">Precio: ${price}</p>
