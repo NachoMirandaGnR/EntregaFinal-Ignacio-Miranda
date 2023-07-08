@@ -1,4 +1,4 @@
-/* .Checkout {
+.Checkout {
   max-width: 600px;
   margin: 0 auto;
 }
@@ -43,4 +43,4 @@
 .CheckoutForm .errorMessage {
   color: red;
   margin-top: 10px;
-} */
+}
